@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.foto {
+  background-color: inherit;
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(124, 124, 124);
+}
+
+h1 {
+  text-align: center;
+  margin: 15px 0 20px 0;
+  color: white;
+}
+
+.searchdiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  color: white;
+}
+.inp {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.inp1 {
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: color 0.4s linear;
+  position: relative;
+}
+.inp1:hover {
+  color: #fff;
+  border-bottom: solid 1px orange;
+}
+
+.news {
+  padding: 180px 20px 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hidediv {
+  display: none;
+}
+
+.showdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(5, 5, 5);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(224, 217, 217);
+}
+.showdiv,
+h2,
+p {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.showdiv a {
+  font-size: x-large;
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+}
+
+.showdiv a:hover {
+  color: rgb(252, 249, 249);
+  border-bottom: solid 1px orange;
+}
+.url {
+  margin-top: 7px;
+  order: 1;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.previous,
+.next {
+  width: 80px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.previous:hover {
+  background-color: orange;
+  color: white;
+  border-radius: 3px;
+}
+.next:hover {
+  background-color: orange;
+  color: white;
+  border-radius: 3px;
+}
+footer {
+  background-color: rgb(124, 124, 124);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.thankyou {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .news {
+    padding: 150px 10px 10px 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .foto {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .showdiv a {
+    font-size: large;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .inp {
+    display: flex;
+    gap: 3px;
+  }
+
+  .inp1 {
+    padding: 0;
+    font-size: small;
+  }
+
+  .news {
+    padding: 120px 5px 5px 5px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .previous,
+  .next {
+    width: 60px;
+    height: 20px;
+  }
+
+  .thankyou {
+    font-size: 0.8rem;
+  }
+}
