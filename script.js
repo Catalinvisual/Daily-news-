@@ -37,22 +37,30 @@ function news(json) {
   console.log(json);
   json.forEach((element, numar) => {
     const x =
-      element.title != "[Removed]" && numar <= 9 ? "showdiv" : "hidediv";
+      element.title != ["Removed"] && numar <= 9 ? "showdiv" : "hidediv";
 
-    noutati.innerHTML += `
+    const y = element.description;
+    const z = element.author;
+    const urlremove = element.urlToImage;
 
-<div class="card ${x}">
-<h2>${element.title}</h2>
-<p>${element.description}</p>
-<p>${element.author}</p>
-<p>${element.publishedAt}</p>
-<a class="url" href="${element.url} ">Read more</a>
-<div class="foto">
-<img src="${element.urlToImage}">
-</div>
-</div>
-   
-`;
+    if (y != ["Removed"] && z != null && urlremove != null) {
+      noutati.innerHTML += `
+
+    <div class="card ${x}">
+    <h2>${element.title}</h2>
+    <p>${element.description}</p>
+    <p>${element.author}</p>
+    <p>${element.publishedAt}</p>
+    <a class="url" href="${element.url}">Read more</a>
+    <div class="foto">
+    <img src="${element.urlToImage}">
+    </div>
+    </div>
+       
+    `;
+    }
+
+    console.log(json);
   });
 
   btnsearch.addEventListener("click", () => {
