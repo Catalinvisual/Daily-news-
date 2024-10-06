@@ -72,6 +72,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  transition: all 5.0 ;
 }
 
 .hidediv {
@@ -91,11 +92,11 @@ h1 {
 
 .card {
   background-color: rgb(255, 255, 255);
+  
 }
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transform: scale(1.05);
-  transition:all 0.5;
 }
 .showdiv,
 h2,
@@ -186,6 +187,10 @@ footer {
     font-size: large;
   }
 
+  .btns{
+   margin-top: 20px;
+  }
+
   footer {
     flex-direction: column;
     text-align: center;
@@ -213,6 +218,7 @@ footer {
 
   .btn {
     font-size: 12px;
+    margin-top: 10px;
   }
 
   .previous,
